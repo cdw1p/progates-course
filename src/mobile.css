@@ -1,0 +1,8 @@
+ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-inline {
+  flex-wrap: wrap;
+}
+
+li.ant-menu-item {
+  padding: 0px 20px !important;
+  width: 20px !important;
+}

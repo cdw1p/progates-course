@@ -1,0 +1,16 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+ul.slick-dots.slick-dots-bottom li {
+  background-color: black;
+}
+slick-dots.slick-dots-bottom {
+  z-index: -1;
+}
+
+.buttonContainer {
+  display: flex;
+  align-content: space-between;
+}

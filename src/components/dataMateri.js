@@ -1,0 +1,35 @@
+const dataMateri = {
+  en: [
+    { materi: "HTML", max: 173, linkTo: "/en/html" },
+    { materi: "JS", max: 84, linkTo: "/en/js" },
+    { materi: "JS (ES6)", max: 211, linkTo: "/en/es6" },
+    { materi: "jQuery", max: 90, linkTo: "/en/jqry" },
+    { materi: "Ruby", max: 189, linkTo: "/en/ruby" },
+    { materi: "Rails5", max: 239, linkTo: "/en/rails" },
+    { materi: "PHP", max: 98, linkTo: "/en/php" },
+    { materi: "Java", max: 212, linkTo: "/en/java" },
+    { materi: "Python", max: 169, linkTo: "/en/py" },
+    { materi: "Command Line", max: 32, linkTo: "/en/cm" },
+    { materi: "Git", max: 23, linkTo: "/en/git" },
+    { materi: "SQL", max: 139, linkTo: "/en/sql" },
+    { materi: "Sass", max: 32, linkTo: "/en/sass" },
+    { materi: "Go", max: 138, linkTo: "/en/go" },
+    { materi: "React.js", max: 141, linkTo: "/en/react" },
+    { materi: "Node.js", max: 97, linkTo: "/en/node" },
+  ],
+  id: [
+    { materi: "Command Line", max: 31, linkTo: "/id/cm" },
+    { materi: "Git", max: 23, linkTo: "/id/git" },
+    { materi: "HTML", max: 173, linkTo: "/id/html" },
+    { materi: "JS (ES6)", max: 211, linkTo: "/id/es6" },
+    { materi: "Java", max: 118, linkTo: "/id/java" },
+    { materi: "Node.js", max: 97, linkTo: "/id/node" },
+    { materi: "PHP", max: 147, linkTo: "/id/node" },
+    { materi: "Python", max: 170, linkTo: "/id/py" },
+    { materi: "React.js", max: 141, linkTo: "/id/react" },
+    { materi: "SQL", max: 139, linkTo: "/id/sql" },
+    { materi: "Sass", max: 32, linkTo: "/id/sass" },
+  ],
+};
+
+export default dataMateri;
