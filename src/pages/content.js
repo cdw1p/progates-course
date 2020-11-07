@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Carousel, Button } from "antd";
 import { RightSquareOutlined, LeftSquareOutlined } from "@ant-design/icons";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Scrapper from "../components/scrapper";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
@@ -62,10 +63,8 @@ export default class App extends Component {
         <Carousel
           ref={(node) => (this.carousel = node)}
           dots={false}
-          afterChange={(x) => {
-            this.setState(() => ({
-              currentPage: x,
-            }));
+          afterChange={(index) => {
+            this.setState(() => ({ currentPage: index }));
           }}
         >
           {this.state.dataCarousel.map((image, i) => {
@@ -73,27 +72,25 @@ export default class App extends Component {
               <div key={i}>
                 <h3
                   style={
-                    this.device === "big"
-                      ? styles.imageContent
-                      : { height: "fit-content" }
+                    this.device === "big" ?
+                      styles.imageContent
+                    :
+                      { height: "fit-content" }
                   }
                 >
-                  <Zoom>
-                    <picture>
-                      <source media="(max-width: 800px)" srcSet={this.state.dataCarousel[this.state.currentPage]} />
-                      <img
-                        style={
-                          this.device === "big" ?
-                            {
-                              height: this.state.pageSize.height,
-                              width: this.state.pageSize.width - 295,
-                            }
-                          : { width: "95vw" }
-                        }
-                        src={this.state.dataCarousel[this.state.currentPage]}
-                        alt=""
-                      />
-                    </picture>
+                  <Zoom transitionDuration={0}>
+                    <LazyLoadImage
+                      style={
+                        this.device === "big" ?
+                          {
+                            height: this.state.pageSize.height,
+                            width: this.state.pageSize.width - 295,
+                          }
+                        : { width: "95vw" }
+                      }
+                      src={this.state.dataCarousel[this.state.currentPage]}
+                      effect="blur"
+                    />
                   </Zoom>
                 </h3>
               </div>
