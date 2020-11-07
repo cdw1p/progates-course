@@ -19,7 +19,7 @@ export default class App extends Component {
         width: 0,
         height: 0,
       },
-      currentPage: 1,
+      currentPage: 1
     };
   }
 
@@ -68,7 +68,7 @@ export default class App extends Component {
             }));
           }}
         >
-          {this.state.dataCarousel.map((imageUrl, i) => {
+          {this.state.dataCarousel.map((image, i) => {
             return (
               <div key={i}>
                 <h3
@@ -80,17 +80,17 @@ export default class App extends Component {
                 >
                   <Zoom>
                     <picture>
-                      <source media="(max-width: 800px)" srcSet={imageUrl} />
+                      <source media="(max-width: 800px)" srcSet={this.state.dataCarousel[this.state.currentPage]} />
                       <img
                         style={
-                          this.device === "big"
-                            ? {
-                                height: this.state.pageSize.height,
-                                width: this.state.pageSize.width - 295,
-                              }
-                            : { width: "95vw" }
+                          this.device === "big" ?
+                            {
+                              height: this.state.pageSize.height,
+                              width: this.state.pageSize.width - 295,
+                            }
+                          : { width: "95vw" }
                         }
-                        src={imageUrl}
+                        src={this.state.dataCarousel[this.state.currentPage]}
                         alt=""
                       />
                     </picture>
